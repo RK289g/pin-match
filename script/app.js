@@ -23,6 +23,9 @@ document.getElementById('generate-pin').addEventListener('click', function () {
     //console.log(pin);
     const outputField = document.getElementById('output-field');
     outputField.value = pin;
+
+    const displayPinField = document.getElementById('typed-number');
+    displayPinField.value = '';
 });
 
 document.getElementById('calculator').addEventListener('click', function (event) {
@@ -49,7 +52,7 @@ document.getElementById('calculator').addEventListener('click', function (event)
     }
 })
 
-document.getElementById('typed-pin').addEventListener('click',function(){
+document.getElementById('typed-pin').addEventListener('click', function () {
     const displayPinField = document.getElementById('output-field');
     const currentPin = displayPinField.value;
 
@@ -58,11 +61,11 @@ document.getElementById('typed-pin').addEventListener('click',function(){
 
     const pinSuccessMessage = document.getElementById('pin-success');
     const pinFailMessage = document.getElementById('pin-fail');
-    if(currentPin == inputPin){
+    if (currentPin == inputPin) {
         pinSuccessMessage.style.display = 'block';
         pinFailMessage.style.display = 'none';
     }
-    else{ 
+    else {
         pinFailMessage.style.display = 'block';
         pinSuccessMessage.style.display = 'none';
     }
